@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mpeketoni Premier Academy — Inspiring Minds, Shaping Futures</title>
+<meta name="description" content="Mpeketoni Premier Preparatory & Junior School offers quality holistic education in Mpeketoni, Lamu — nurturing responsible, knowledgeable and innovative learners." />
+<meta property="og:title" content="Mpeketoni Premier Academy — Inspiring Minds, Shaping Futures" />
+<meta property="og:description" content="Quality holistic education in Mpeketoni, Lamu." />
+<meta property="og:image" content="assets/hero-students.jpg" />
+<link rel="icon" href="https://uploads.onecompiler.io/443jqrenw/1781774303466/logo.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'navy-deep': '#0b1a2b',
+        navy: '#13263d',
+        gold: '#c8a35a',
+        cream: '#f5efe4',
+      },
+      fontFamily: {
+        sans: ['Inter','ui-sans-serif','system-ui'],
+        display: ['"Cormorant Garamond"','serif'],
+      },
+      boxShadow: {
+        elegant: '0 20px 40px -20px rgba(0,0,0,.35)',
+        card: '0 10px 30px -15px rgba(11,26,43,.2)',
+        glow: '0 0 0 1px rgba(200,163,90,.18), 0 24px 60px -24px rgba(200,163,90,.55)',
+      },
+      animation: {
+        'fade-up': 'fade-up .85s ease-out both',
+        'float': 'float 7s ease-in-out infinite',
+        'pulse-soft': 'pulse-soft 4s ease-in-out infinite',
+        'drift': 'drift 18s linear infinite',
+        'gentle-spin': 'gentle-spin 18s linear infinite',
+        'shimmer': 'shimmer 2.8s linear infinite',
+      },
+      keyframes: {
+        'fade-up': { '0%':{opacity:0, transform:'translateY(16px)'}, '100%':{opacity:1, transform:'translateY(0)'} },
+        'float': { '0%,100%':{transform:'translateY(0px)'}, '50%':{transform:'translateY(-10px)'} },
+        'pulse-soft': { '0%,100%':{opacity:.75, transform:'scale(1)'}, '50%':{opacity:1, transform:'scale(1.02)'} },
+        'drift': { '0%':{transform:'translate3d(0,0,0) rotate(0deg)'}, '50%':{transform:'translate3d(20px,-20px,0) rotate(8deg)'}, '100%':{transform:'translate3d(0,0,0) rotate(0deg)'} },
+        'gentle-spin': { '0%':{transform:'rotate(0deg)'}, '100%':{transform:'rotate(360deg)'} },
+        'shimmer': { '0%':{backgroundPosition:'-200% 0'}, '100%':{backgroundPosition:'200% 0'} },
+      },
+    },
+  },
+};
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    background:#f5efe4;
+    color:#0b1a2b;
+    font-family: Inter, system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(200,163,90,.10), transparent 28%),
+      radial-gradient(circle at 85% 10%, rgba(255,255,255,.10), transparent 22%),
+      radial-gradient(circle at 50% 80%, rgba(19,38,61,.08), transparent 30%);
+    z-index:-1;
+    animation: drift 18s linear infinite;
+  }
+  .container-prose { max-width: 1180px; margin-inline:auto; padding-inline:1.25rem; }
+  .eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#c8a35a; font-weight:600; }
+  .rule-gold { display:inline-block; width:2.25rem; height:1px; background:#c8a35a; }
+  .school-name {
+    background: linear-gradient(135deg, #c8a35a 0%, #f4e4bc 50%, #c8a35a 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.5px;
+    animation: shimmer 6s linear infinite;
+  }
+  .luxury-card {
+    transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease, border-color .5s ease, filter .5s ease;
+    will-change: transform;
+  }
+  .luxury-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 28px 70px -26px rgba(11,26,43,.45);
+    filter: saturate(1.05);
+  }
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .shine::after {
+    content:"";
+    position:absolute;
+    top:-120%;
+    left:-40%;
+    width:40%;
+    height:340%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.20), transparent);
+    transform: rotate(18deg);
+    transition: left .9s ease;
+  }
+  .shine:hover::after { left:120%; }
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px) scale(.985);
+    transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1);
+  }
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  .hover-depth {
+    transform-style: preserve-3d;
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
+  }
+  .hover-depth:hover {
+    transform: perspective(1000px) translateY(-8px) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 0 30px 80px -30px rgba(11,26,43,.4);
+  }
+  .parallax-slow {
+    animation: float 10s ease-in-out infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(255,255,255,.95) 0%, rgba(200,163,90,.7) 35%, rgba(200,163,90,0) 70%);
+    filter: blur(.3px);
+    opacity: .75;
+    pointer-events: none;
+    animation: drift 16s linear infinite;
+  }
+  .button-lift {
+    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease, color .3s ease;
+  }
+  .button-lift:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 18px 40px -22px rgba(200,163,90,.75);
+  }
+  .soft-border {
+    border: 1px solid rgba(255,255,255,.1);
+    background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  }
+</style>
+</head>
+<body class="bg-cream text-navy-deep">
+
+<header class="sticky top-0 z-40 border-b border-white/10 bg-navy-deep/85 backdrop-blur-md">
+  <div class="container-prose flex h-16 items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 text-cream">
+      <img src="https://uploads.onecompiler.io/443jqrenw/1781774303466/logo.jpeg" alt="Mpeketoni Premier Preparatory and Junior School logo" class="h-11 w-11 rounded-full object-cover animate-pulse-soft" />
+      <span class="font-display text-base leading-tight">
+        <span class="school-name font-semibold text-lg">MPEKETONI PREMIER</span>
+        <span class="block text-xs font-sans uppercase tracking-[0.18em] text-gold/80">Preparatory &amp; Junior School</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex gap-8">
+      <a href="#about" class="text-sm font-medium text-cream/80 hover:text-gold transition-colors duration-300">About</a>
+      <a href="#values" class="text-sm font-medium text-cream/80 hover:text-gold transition-colors duration-300">Why us</a>
+      <a href="#facilities" class="text-sm font-medium text-cream/80 hover:text-gold transition-colors duration-300">Facilities</a>
+      <a href="#gallery" class="text-sm font-medium text-cream/80 hover:text-gold transition-colors duration-300">Gallery</a>
+      <a href="#contact" class="text-sm font-medium text-cream/80 hover:text-gold transition-colors duration-300">Contact</a>
+    </nav>
+    <a href="#contact" class="hidden md:inline-block rounded-full bg-gold px-4 py-2 text-sm font-semibold text-navy-deep button-lift hover:bg-cream transition-all duration-300 hover:shadow-glow">Enroll</a>
+  </div>
+</header>
+
+<section id="top" class="relative isolate overflow-hidden bg-navy-deep">
+  <img src="assets/hero-students.jpg" alt="Smiling students at Mpeketoni Premier Academy" class="absolute inset-0 h-full w-full object-cover opacity-40 scale-105 animate-float" />
+  <div class="absolute inset-0 bg-gradient-to-b from-navy-deep/80 via-navy-deep/70 to-navy-deep"></div>
+  <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+  <div class="container-prose relative grid gap-12 py-24 md:py-36">
+    <div class="max-w-3xl animate-fade-up">
+      <span class="eyebrow flex items-center gap-3"><span class="rule-gold"></span> Est. Jan 2014 . Mpeketoni · Lamu</span>
+      <h1 class="mt-6 font-display text-5xl md:text-7xl leading-[1.05] text-cream">Building a tradition of <em class="not-italic text-gold">excellence</em>.</h1>
+      <p class="mt-6 max-w-xl text-lg md:text-xl text-cream/80">Quality education through a supportive environment, competent staff and well-structured programs — nurturing responsible, knowledgeable and innovative learners.</p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#about" class="shine rounded-full bg-gold px-7 py-3 text-sm font-semibold text-navy-deep shadow-elegant button-lift transition-all duration-300 hover:-translate-y-1">Discover the school</a>
+        <a href="#contact" class="rounded-full border border-cream/30 px-7 py-3 text-sm font-semibold text-cream button-lift transition-all duration-300 hover:border-gold hover:text-gold hover:-translate-y-1">Visit us →</a>
+      </div>
+    </div>
+    <dl class="grid max-w-3xl grid-cols-3 gap-6 border-t border-white/10 pt-10 text-cream">
+      <div class="reveal" style="transition-delay:.05s"><dt class="font-display text-3xl md:text-4xl text-gold">20+</dt><dd class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/60">Years of teaching</dd></div>
+      <div class="reveal" style="transition-delay:.15s"><dt class="font-display text-3xl md:text-4xl text-gold">100%</dt><dd class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/60">Holistic curriculum</dd></div>
+      <div class="reveal" style="transition-delay:.25s"><dt class="font-display text-3xl md:text-4xl text-gold">1:1</dt><dd class="mt-1 text-xs uppercase tracking-[0.18em] text-cream/60">Mentorship focus</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="about" class="bg-green-50 py-24">
+  <div class="container-prose grid gap-12 md:gap-20 md:grid-cols-2">
+    <div class="reveal" style="transition-delay:.05s">
+      <span class="eyebrow">About the academy</span>
+      <h2 class="mt-4 font-sans font-semibold italic text-4xl md:text-5xl leading-tight text-navy">A COMMUNITY FOUNDED ON INTEGRITY, HARD WORK AND MUTUAL RESPECT.</h2>
+      <p class="mt-6 text-base leading-relaxed font-sans text-navy/80">
+        Our school is dedicated to providing quality education that empowers learners academically, socially, and emotionally. We pride ourselves on a safe and supportive environment, qualified and passionate teachers, and a strong focus on both classroom learning and extracurricular development. The school promotes diversity, inclusion, and equal opportunities for all learners to discover their unique strengths..</p>
+      <p class="mt-4 text-base leading-relaxed font-sans text-navy/80">We promote diversity, inclusion and equal opportunities for all learners to discover their unique strengths — through mentorship, guidance and counseling that ensure the holistic development of every student.</p>
+    </div>
+    <div class="grid gap-6">
+      <article class="luxury-card hover-depth reveal rounded-2xl border-amber-200 bg-amber-50 p-7 shadow-card" style="transition-delay:.1s">
+        <div class="flex items-baseline gap-3"><span class="rule-gold"></span><h3 class="font-display text-xl text-navy-deep">Our Mission</h3></div>
+        <p class="mt-3 text-sm leading-relaxed text-navy-deep/70">To offer quality education through a supportive environment, competent staff and well-structured programs that promote academic excellence, character development and lifelong learning.</p>
+      </article>
+      <article class="luxury-card hover-depth reveal rounded-2xl border-amber-200 bg-amber-50 p-7 shadow-card" style="transition-delay:.2s">
+        <div class="flex items-baseline gap-3"><span class="rule-gold"></span><h3 class="font-display text-xl text-navy-deep">Our Vision</h3></div>
+        <p class="mt-3 text-sm leading-relaxed text-navy-deep/70">To provide holistic education that nurtures responsible, knowledgeable and innovative learners who are prepared to thrive in a dynamic world.</p>
+      </article>
+      <article class="luxury-card hover-depth reveal rounded-2xl border-navy-deep/10 bg-white p-7 shadow-card" style="transition-delay:.3s">
+        <div class="flex items-baseline gap-3"><span class="rule-gold"></span><h3 class="font-display text-xl text-navy-deep">Our Declaration</h3></div>
+        <p class="mt-3 text-sm leading-relaxed text-navy-deep/70">We — students, staff and stakeholders — commit ourselves to uphold the values, rules and standards that foster respect, discipline and academic excellence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="values" class="bg-navy-deep py-24 text-cream">
+  <div class="container-prose">
+    <div class="flex flex-col md:flex-row md:items-end items-start justify-between gap-6">
+      <div class="max-w-xl reveal" style="transition-delay:.05s">
+        <span class="eyebrow">Why families choose us</span>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl leading-tight text-cream">An education that prepares the whole child.</h2>
+      </div>
+      <p class="max-w-sm text-sm text-cream/70 reveal" style="transition-delay:.15s">Four commitments shape every classroom, every assembly and every conversation we have with our families.</p>
+    </div>
+    <div class="mt-16 grid gap-px overflow-hidden rounded-2xl border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
+      <div class="luxury-card hover-depth reveal soft-border p-8 flex-col gap-4" style="transition-delay:.05s"><span class="font-display text-sm text-gold">01</span><h3 class="font-display text-xl">Qualified Teachers</h3><p class="text-sm text-cream/70">Experienced, caring educators committed to the academic and personal growth of every learner.</p></div>
+      <div class="luxury-card hover-depth reveal soft-border p-8 flex-col gap-4" style="transition-delay:.15s"><span class="font-display text-sm text-gold">02</span><h3 class="font-display text-xl">Modern Learning</h3><p class="text-sm text-cream/70">Technology-enhanced classrooms, ICT integration and inquiry-led teaching for the 21st century.</p></div>
+      <div class="luxury-card hover-depth reveal soft-border p-8 flex-col gap-4" style="transition-delay:.25s"><span class="font-display text-sm text-gold">03</span><h3 class="font-display text-xl">Sports & Co-curricular</h3><p class="text-sm text-cream/70">Football, athletics, music, drama and clubs — developing talents far beyond academics.</p></div>
+      <div class="luxury-card hover-depth reveal soft-border p-8 flex-col gap-4" style="transition-delay:.35s"><span class="font-display text-sm text-gold">04</span><h3 class="font-display text-xl">Character & Mentorship</h3><p class="text-sm text-cream/70">Guidance and counseling that build discipline, integrity and confidence in every child.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="facilities" class="bg-green-50 text-navy-deep py-24">
+  <div class="container-prose">
+    <div class="max-w-2xl reveal" style="transition-delay:.05s">
+      <span class="eyebrow">Facilities</span>
+      <h2 class="mt-4 font-sans font-bold text-4xl md:text-5xl leading-tight text-navy-deep">A place where every learner can thrive.</h2>
+      <p class="mt-4 text-navy-deep/70">From the classroom to the playing field, every space on campus is designed to support curiosity, character and growth.</p>
+    </div>
+    <div id="gallery" class="mt-14 grid gap-6 md:grid-cols-6">
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-4 md:row-span-2" style="transition-delay:.05s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1782031940064/gate%201.jpeg" alt="Campus" class="h-[28rem] w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">A serene, green school</h3><p class="mt-2 text-sm text-cream">Lush lawns, shaded trees and flower gardens make our compound a calm, inspiring place to learn.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-2" style="transition-delay:.15s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1782142370460/roof.jpeg" alt="Classroom" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">Modern classrooms</h3><p class="mt-2 text-sm text-cream">Bright, well-equipped rooms designed for focused learning and collaborative work.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-2" style="transition-delay:.25s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1782108961989/welcome.jpeg" alt="Library" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">A well-stocked library</h3><p class="mt-2 text-sm text-cream">A quiet space for reading, research and the love of discovery to take root.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-3" style="transition-delay:.1s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1781773253506/LAB.jpeg" alt="Science lab" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">Modern science lab</h3><p class="mt-2 text-sm text-cream">Reagents, Bunsen burners and microscopes — practical science with proper safety standards.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-3" style="transition-delay:.2s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1781773700914/computer%20labs.jpg" alt="ICT lab" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">Technology & ICT lab</h3><p class="mt-2 text-sm text-cream">Modern computers and high-speed internet for typing, research, coding and digital creativity.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-3" style="transition-delay:.3s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1781771312434/dh.jpeg" alt="Dining hall" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">Kitchen & dining hall</h3><p class="mt-2 text-sm text-cream">Spacious, hygienic dining with nutritious, freshly prepared meals every school day.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-3" style="transition-delay:.4s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1781771779459/images.jpg" alt="Playground" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">Sports & playgrounds</h3><p class="mt-2 text-sm text-cream">Open fields for football, volleyball and athletics build teamwork, discipline and fitness.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-3" style="transition-delay:.5s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1782109188427/achievement.jpeg" alt="Achievement" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">Achievement & Innovation</h3><p class="mt-2 text-sm text-cream">Highlighting our students' accomplishments and fostering a culture of innovation.</p></div>
+      </article>
+      <article class="luxury-card hover-depth reveal relative overflow-hidden rounded-2xl shadow-card md:col-span-3" style="transition-delay:.6s">
+        <img src="https://uploads.onecompiler.io/443jqrenw/1782109321243/farming.jpeg" alt="Agriculture" class="h-72 w-full object-cover scale-105 transition-transform duration-700 hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-cream"><h3 class="font-display text-2xl">Farming & Agriculture</h3><p class="mt-2 text-sm text-cream">Hands-on learning experiences in sustainable farming and agricultural practices.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gold/15 py-24">
+  <div class="container-prose max-w-3xl text-center reveal" style="transition-delay:.1s">
+    <span class="eyebrow">Our promise</span>
+    <blockquote class="mt-6 font-display text-3xl md:text-4xl leading-tight text-navy-deep">“Inspiring minds, shaping futures — one child, one lesson, one day at a time.”</blockquote>
+    <p class="mt-6 text-sm uppercase tracking-[0.2em] text-navy-deep/70">— The Mpeketoni Premier Academy Family</p>
+  </div>
+</section>
+
+<section id="contact" class="bg-navy-deep py-24 text-cream">
+  <div class="container-prose grid gap-12 md:grid-cols-2">
+    <div class="reveal" style="transition-delay:.05s">
+      <span class="eyebrow">Visit · Call · Write</span>
+      <h2 class="mt-4 font-display text-4xl md:text-5xl leading-tight text-cream">Come and experience our school.</h2>
+      <p class="mt-4 max-w-md text-cream/75">We warmly invite parents and guardians to tour the school, meet our teachers and see our facilities firsthand.</p>
+    </div>
+    <dl class="grid gap-6 self-start">
+      <div class="luxury-card hover-depth reveal rounded-2xl border-white/10 bg-white/5 p-6" style="transition-delay:.1s">
+        <dt class="text-xs uppercase tracking-[0.2em] text-gold">Phone</dt>
+        <dd class="mt-2 font-display text-2xl"><a href="tel:+254716924438" class="hover:text-gold transition-colors duration-300">+254 716924438</a></dd>
+        <dd class="mt-3 flex flex-wrap gap-3">
+          <a href="https://wa.me/254716924438?text=Hello%20Mpeketoni%20Premier%20Academy" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-white button-lift transition-transform duration-300 hover:-translate-y-1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 9.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.989 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0.16 5.335.157 11.892c0 2.096.547 4.134 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white button-lift transition-transform duration-300 hover:-translate-y-1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+        </dd>
+      </div>
+      <div class="luxury-card hover-depth reveal rounded-2xl border-white/10 bg-white/5 p-6" style="transition-delay:.2s">
+        <dt class="text-xs uppercase tracking-[0.2em] text-gold">Email</dt>
+        <dd class="mt-2 font-display text-2xl break-all"><a href="mailto:mpeketonipremier40@gmail.com" class="hover:text-gold transition-colors duration-300">mpeketonipremier40@gmail.com</a></dd>
+      </div>
+      <div class="luxury-card hover-depth reveal rounded-2xl border-white/10 bg-white/5 p-6" style="transition-delay:.3s">
+        <dt class="text-xs uppercase tracking-[0.2em] text-gold">Location</dt>
+        <dd class="mt-2 font-display text-2xl">Mpeketoni, Lamu County, Kenya</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<footer class="bg-navy-deep border-t border-white/10 py-10 text-cream/70">
+  <div class="container-prose flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="https://uploads.onecompiler.io/443jqrenw/1781774303466/logo.jpeg" alt="School logo" class="h-10 w-10 rounded-full object-cover animate-pulse-soft" />
+      <span class="text-sm">© <span id="yr"></span> Mpeketoni Premier Preparatory & Junior School</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="rounded-full bg-white/10 p-2 text-cream transition-all duration-300 hover:bg-[#1877F2] hover:text-white hover:scale-110">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => io.observe(el));
+
+  const particles = document.getElementById('particles');
+  const particleCount = 18;
+  for (let i = 0; i < particleCount; i++) {
+    const p = document.createElement('span');
+    const size = 6 + Math.random() * 10;
+    p.className = 'particle';
+    p.style.width = `${size}px`;
+    p.style.height = `${size}px`;
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.top = `${Math.random() * 100}%`;
+    p.style.animationDuration = `${10 + Math.random() * 14}s`;
+    p.style.animationDelay = `${Math.random() * 6}s`;
+    p.style.opacity = `${0.25 + Math.random() * 0.5}`;
+    particles.appendChild(p);
+  }
+</script>
+
+</body>
+</html>
